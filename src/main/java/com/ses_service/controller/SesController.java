@@ -32,4 +32,16 @@ public class SesController {
     public ResponseEntity<List<ServiceEntrySheet>> getAll(){
         return ResponseEntity.ok(sesService.getAll());
 }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ServiceEntrySheet> updateSes(@PathVariable Long id,@RequestBody ServiceEntrySheet updateSes){
+        ServiceEntrySheet ses = sesService.updateSheet(id,updateSes);
+        return ResponseEntity.ok(ses);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteSes(@PathVariable Long id){
+         sesService.deleteSes(id);
+         return ResponseEntity.noContent().build();
+    }
 }
