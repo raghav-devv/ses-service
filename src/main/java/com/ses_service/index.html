@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Entry Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+        }
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+        .field {
+            flex: 1;
+        }
+        .field label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>New Service Sheet</h2>
+
+<div class="card">
+    <h3>General Information</h3>
+    <div class="row">
+        <div class="field">
+            <label>Supplier</label>
+            <input type="text" placeholder="Supplier Name">
+        </div>
+        <div class="field">
+            <label>Customer</label>
+            <input type="text" placeholder="Customer Name">
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Service Details</h3>
+    <div class="row">
+        <div class="field">
+            <label>Service Start Date</label>
+            <input type="date">
+        </div>
+        <div class="field">
+            <label>Service End Date</label>
+            <input type="date">
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Service Sheet Lines</h3>
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>Site preparation</td>
+            <td>10</td>
+            <td>500</td>
+            <td>5000</td>
+        </tr>
+    </table>
+</div>
+
+<div class="card">
+    <h3>Summary</h3>
+    <strong>Subtotal: 12,500 USD</strong>
+</div>
+
+</body>
+</html>
